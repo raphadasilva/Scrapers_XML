@@ -20,8 +20,6 @@ for noeud in arbre.xpath("//Election/Region/SectionElectorale/Communes/Commune")
 		for exprimes in resultats.xpath("Mentions/Exprimes/Nombre"):
 			objet["exprimes"] = int(exprimes.text)
 		for liste in resultats.xpath("Listes/Liste"):
-			nu = "" # je crée cette variable pour l'inclure comme clé de dictionnaire...
-			vox = 0
 			for nuance in liste.xpath("CodNuaListe"):
 				nu = nuance.text
 			for voix in liste.xpath("NbVoix"):
