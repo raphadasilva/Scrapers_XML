@@ -21,8 +21,6 @@ for departement in departements:
 			for exprimes in resultats.xpath("Mentions/Exprimes/Nombre"):
 				objet["exprimes"] = int(exprimes.text)
 			for liste in resultats.xpath("Listes/Liste"):
-				nu = "" # on crée cette variable pour mettre la nuance de liste en clé...
-				vox = 0
 				for nuance in liste.xpath("CodNuaListe"):
 					nu = nuance.text
 				for voix in liste.xpath("NbVoix"):
